@@ -84,10 +84,12 @@
       <p>Email: <a href="mailto:contact@p2cx.com">contact@p2cx.com</a></p>
       <p>LinkedIn: <a href="https://www.linkedin.com/company/p2cx/" target="_blank">p2cx LinkedIn</a></p>
 
-      <!-- Getform.io Contact Form -->
-      <form action="YOUR_GETFORM_ENDPOINT_HERE" method="POST" class="contact-form">
+      <!-- Formspree Contact Form -->
+      <form action="https://formspree.io/f/mnqlvxyz" method="POST" class="contact-form">
+        <!-- Hidden field for form name (optional but good practice) -->
+        <input type="hidden" name="form-name" value="contact">
         <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="email" name="_replyto" placeholder="Your Email" required>
         <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
         <button type="submit">Send Message</button>
       </form>
