@@ -1,0 +1,89 @@
+/* General */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 2rem 0;
+}
+
+/* Header */
+header {
+    background: #0078D7; /* Azure blue */
+    color: white;
+    text-align: center;
+    padding: 6rem 0 4rem 0;
+}
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+header p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+.cta-btn {
+    background: #FFC20E;
+    color: #333;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.cta-btn:hover {
+    background: #e6b800;
+}
+
+/* Sections */
+.section {
+    padding: 4rem 0;
+    text-align: center;
+}
+.section.light {
+    background: #f9f9f9;
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 4rem;
+}
+a {
+    color: #0078D7;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .cards {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}
