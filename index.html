@@ -1,126 +1,280 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>p2cx GmbH – Digital Processes</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="p2cx-icon.png">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>p2cx GmbH | Process Automation</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
 
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="container nav-container">
-      <a href="#hero" class="nav-logo"><img src="p2cx-icon.png" alt="p2cx Logo" class="logo-small"></a>
-      <ul class="nav-links">
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
+<!-- NAVBAR -->
 
-  <!-- Hero Section -->
-  <header id="hero" class="hero">
-    <div class="container hero-content fade-in">
-      <img src="p2cx-icon.png" alt="p2cx Logo" class="logo">
-      <h1>p2cx GmbH</h1>
-      <p>Automate business processes in days – no upfront investment, only pay from savings.</p>
-      <a href="#contact" class="cta-button">Request a Workshop</a>
-    </div>
-  </header>
+<nav class="navbar">
 
-  <!-- Services Section -->
-  <section id="services" class="services-section">
-    <div class="container">
-      <h2 class="fade-in">Our Services</h2>
-      <div class="services-grid">
-        <div class="service-card fade-in" style="transition-delay: 0.1s;">
-          <div class="service-icon">⚙️</div>
-          <h3>Workflow Automation</h3>
-          <p>Digitize repetitive processes to save time and reduce errors.</p>
-        </div>
-        <div class="service-card fade-in" style="transition-delay: 0.2s;">
-          <div class="service-icon">☁️</div>
-          <h3>Microsoft Azure Process Builds</h3>
-          <p>Fast, scalable process deployment using Azure Function Apps.</p>
-        </div>
-        <div class="service-card fade-in" style="transition-delay: 0.3s;">
-          <div class="service-icon">📝</div>
-          <h3>Process Mapping & Workshops</h3>
-          <p>Capture and design your processes in a 3-hour workshop.</p>
-        </div>
-        <div class="service-card fade-in" style="transition-delay: 0.4s;">
-          <div class="service-icon">📊</div>
-          <h3>Operational Monitoring & KPI Dashboard</h3>
-          <p>Track performance, identify bottlenecks, and continuously improve.</p>
-        </div>
-        <div class="service-card fade-in" style="transition-delay: 0.5s;">
-          <div class="service-icon">💡</div>
-          <h3>Consulting & Continuous Improvement</h3>
-          <p>Expert guidance to optimize and scale your digital processes.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<div class="container nav-container">
 
-  <!-- About Section -->
-  <section id="about" class="about-section fade-in">
-    <div class="container">
-      <h2>About p2cx GmbH</h2>
-      <p>p2cx helps companies automate and digitize their business processes quickly and securely. From process mapping to building in Microsoft Azure and operational monitoring, we make digital transformation fast, measurable, and affordable.</p>
-      <p><strong>Mission:</strong> Enable rapid, efficient digital processes for all businesses.</p>
-      <p><strong>Vision:</strong> A world where companies focus on value while we handle the automation.</p>
-      <p><strong>Values:</strong> Simplicity, transparency, security, efficiency.</p>
-    </div>
-  </section>
+<div class="logo">p2cx</div>
 
-  <!-- Contact Section -->
-  <section id="contact" class="contact-section fade-in">
-    <div class="container">
-      <h2>Contact Us</h2>
-      <p>Email: <a href="mail to: hauke@p2cx.com">hauke@p2cx.com</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/company/p2cx/" target="_blank">p2cx LinkedIn</a></p>
+<ul class="nav-links">
+<li><a href="#services">Services</a></li>
+<li><a href="#process">How It Works</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
 
-      <!-- Formspree Contact Form -->
-      <form action="https://formspree.io/f/xpqywazb" method="POST" class="contact-form">
-        <input type="hidden" name="form-name" value="contact">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="_replyto" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-        <button type="submit" method="POST">Send Message</button>
-      </form>
-    </div>
-  </section>
+<a href="#contact" class="cta-nav">Book a Workshop</a>
 
-  <!-- Footer -->
-  <footer>
-    &copy; 2026 p2cx GmbH. All rights reserved.
-  </footer>
+</div>
+</nav>
 
-  <!-- Scroll Animations -->
-  <script>
-    const faders = document.querySelectorAll('.fade-in');
-    const appearOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
-    const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll){
-      entries.forEach(entry => {
-        if(!entry.isIntersecting) return;
-        entry.target.classList.add('appear');
-        appearOnScroll.unobserve(entry.target);
-      });
-    }, appearOptions);
-    faders.forEach(fader => appearOnScroll.observe(fader));
 
-    // Smooth scroll for navigation
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e){
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-      });
-    });
-  </script>
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="container hero-grid">
+
+<div class="hero-text">
+
+<h1>Automate Business Processes in Days</h1>
+
+<p>
+p2cx helps companies digitize workflows and automate repetitive
+processes using Microsoft Azure cloud technologies.
+</p>
+
+<div class="hero-buttons">
+<a href="#contact" class="cta-button">Book a Workshop</a>
+<a href="#services" class="secondary-button">Our Services</a>
+</div>
+
+</div>
+
+<div class="hero-image">
+
+<div class="hero-box">
+
+<h3>Process Automation</h3>
+
+<p>Cloud-based workflow automation</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- TECHNOLOGY -->
+
+<section class="trusted">
+
+<div class="container">
+
+<h3>Technologies We Work With</h3>
+
+<div class="trusted-grid">
+
+<div>Microsoft Azure</div>
+<div>Azure Functions</div>
+<div>Power Automate</div>
+<div>REST APIs</div>
+<div>GitHub</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section id="services" class="services">
+
+<div class="container">
+
+<h2>Our Services</h2>
+
+<div class="services-grid">
+
+<div class="service-card">
+<h3>Workflow Automation</h3>
+<p>Digitize repetitive workflows and reduce manual work.</p>
+</div>
+
+<div class="service-card">
+<h3>Azure Process Builds</h3>
+<p>Cloud-native process automation using Microsoft Azure.</p>
+</div>
+
+<div class="service-card">
+<h3>Process Workshops</h3>
+<p>3-hour sessions to identify automation potential.</p>
+</div>
+
+<div class="service-card">
+<h3>KPI Dashboards</h3>
+<p>Real-time monitoring and performance tracking.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PROCESS -->
+
+<section id="process" class="process">
+
+<div class="container">
+
+<h2>How We Work</h2>
+
+<div class="process-grid">
+
+<div class="step">
+<h3>1</h3>
+<h4>Process Workshop</h4>
+<p>Identify automation potential in your workflows.</p>
+</div>
+
+<div class="step">
+<h3>2</h3>
+<h4>Automation Design</h4>
+<p>Design scalable automation using Azure.</p>
+</div>
+
+<div class="step">
+<h3>3</h3>
+<h4>Rapid Implementation</h4>
+<p>Deploy automated processes within days.</p>
+</div>
+
+<div class="step">
+<h3>4</h3>
+<h4>Monitoring</h4>
+<p>Track KPIs and continuously optimize.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about" class="about">
+
+<div class="container">
+
+<h2>About p2cx</h2>
+
+<p>
+p2cx helps companies automate and digitize business processes quickly and securely.
+Using Microsoft Azure technologies we build scalable cloud-based automation solutions.
+</p>
+
+<p>
+Our goal is simple: eliminate repetitive work so teams can focus on value creation.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+<div class="container">
+
+<h2>Ready to Automate Your Processes?</h2>
+
+<p>Start with a 3-hour process workshop.</p>
+
+<a href="#contact" class="cta-button">Book a Workshop</a>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact" class="contact">
+
+<div class="container">
+
+<h2>Contact Us</h2>
+
+<p>Email: <a href="mailto:hauke@p2cx.com">hauke@p2cx.com</a></p>
+
+<form action="https://formspree.io/f/xpqywazb" method="POST" class="contact-form">
+
+<input type="text" name="name" placeholder="Your Name" required>
+
+<input type="email" name="email" placeholder="Your Email" required>
+
+<textarea name="message" placeholder="Your Message" required></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container footer-grid">
+
+<div>
+<h3>p2cx GmbH</h3>
+<p>Process automation consulting</p>
+</div>
+
+<div>
+<h4>Services</h4>
+<p>Workflow Automation</p>
+<p>Azure Processes</p>
+</div>
+
+<div>
+<h4>Contact</h4>
+<p>hauke@p2cx.com</p>
+<p>Germany</p>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+© 2025 p2cx GmbH
+
+</div>
+
+</footer>
+
 
 </body>
 </html>
